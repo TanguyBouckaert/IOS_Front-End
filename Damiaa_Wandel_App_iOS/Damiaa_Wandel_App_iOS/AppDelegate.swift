@@ -7,13 +7,13 @@
 
 import UIKit
 
-@UIApplicationMain
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
+//    var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions lauchOptions: [UIApplication.LaunchOptionsKey: Any]?)-> Bool{
         
-        self.window?.makeKeyAndVisible()
+        //self.window?.makeKeyAndVisible()
 //        Thread.sleep(forTimeInterval: 1)
         return true
     }
@@ -27,22 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
-//    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-//
-//        if #available(iOS 13.0, *){
-//
-//        }else{
-//            let window = UIWindow(frame: UIScreen.main.bounds)
-//            self.window = window
-//
-//            if(user != nil && userSelfIdent != nil){
-//                let mainstoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                let newViewcontroller: UIViewController = mainstoryboard.instantiateViewController(withIdentifier: "viewcontroller") as! ViewController
-//            }
-//        }
-//
-//        return true
-//    }
 
 }
 

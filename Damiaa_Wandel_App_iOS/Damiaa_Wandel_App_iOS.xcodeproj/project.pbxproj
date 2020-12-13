@@ -7,16 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF12B05E2586149B0026A786 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B05D2586149B0026A786 /* DatabaseController.swift */; };
+		BF12B062258614AF0026A786 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B061258614AF0026A786 /* NetworkController.swift */; };
+		BF12B0652586152E0026A786 /* Wandeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B0642586152E0026A786 /* Wandeling.swift */; };
+		BF12B068258615550026A786 /* WandelingOverzicht.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B067258615550026A786 /* WandelingOverzicht.swift */; };
 		BF734275257CD9620066E7C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF734274257CD9620066E7C2 /* LaunchScreen.storyboard */; };
 		BF734279257CDED20066E7C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF734278257CDED20066E7C2 /* Main.storyboard */; };
 		BF734282257CEF920066E7C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734281257CEF920066E7C2 /* SceneDelegate.swift */; };
 		BF734286257D0C950066E7C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734285257D0C950066E7C2 /* ViewController.swift */; };
 		BF9F83132534C5CC00EDFF2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F83122534C5CC00EDFF2B /* AppDelegate.swift */; };
 		BF9F83172534C5CF00EDFF2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF9F83162534C5CF00EDFF2B /* Assets.xcassets */; };
-		BF9F831A2534C5CF00EDFF2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF9F83192534C5CF00EDFF2B /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF12B05D2586149B0026A786 /* DatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
+		BF12B061258614AF0026A786 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		BF12B0642586152E0026A786 /* Wandeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wandeling.swift; sourceTree = "<group>"; };
+		BF12B067258615550026A786 /* WandelingOverzicht.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WandelingOverzicht.swift; sourceTree = "<group>"; };
 		BF734274257CD9620066E7C2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF734278257CDED20066E7C2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BF734281257CEF920066E7C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,7 +31,6 @@
 		BF9F830F2534C5CC00EDFF2B /* Damiaa_Wandel_App_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Damiaa_Wandel_App_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9F83122534C5CC00EDFF2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF9F83162534C5CF00EDFF2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BF9F83192534C5CF00EDFF2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF9F831B2534C5CF00EDFF2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,6 +45,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF12B059258614170026A786 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF12B05D2586149B0026A786 /* DatabaseController.swift */,
+				BF12B061258614AF0026A786 /* NetworkController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BF12B05B2586143A0026A786 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BF12B0642586152E0026A786 /* Wandeling.swift */,
+				BF12B067258615550026A786 /* WandelingOverzicht.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		BF12B05C258614600026A786 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF12B095258627240026A786 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		BF9F83062534C5CC00EDFF2B = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +96,10 @@
 		BF9F83112534C5CC00EDFF2B /* Damiaa_Wandel_App_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				BF12B095258627240026A786 /* DataModel */,
+				BF12B05C258614600026A786 /* Views */,
+				BF12B05B2586143A0026A786 /* Models */,
+				BF12B059258614170026A786 /* Controllers */,
 				BF9F83122534C5CC00EDFF2B /* AppDelegate.swift */,
 				BF734281257CEF920066E7C2 /* SceneDelegate.swift */,
 				BF734285257D0C950066E7C2 /* ViewController.swift */,
@@ -65,17 +107,8 @@
 				BF9F831B2534C5CF00EDFF2B /* Info.plist */,
 				BF734274257CD9620066E7C2 /* LaunchScreen.storyboard */,
 				BF734278257CDED20066E7C2 /* Main.storyboard */,
-				BF9F83182534C5CF00EDFF2B /* Preview Content */,
 			);
 			path = Damiaa_Wandel_App_iOS;
-			sourceTree = "<group>";
-		};
-		BF9F83182534C5CF00EDFF2B /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				BF9F83192534C5CF00EDFF2B /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +168,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF9F831A2534C5CF00EDFF2B /* Preview Assets.xcassets in Resources */,
 				BF9F83172534C5CF00EDFF2B /* Assets.xcassets in Resources */,
 				BF734275257CD9620066E7C2 /* LaunchScreen.storyboard in Resources */,
 				BF734279257CDED20066E7C2 /* Main.storyboard in Resources */,
@@ -149,9 +181,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF12B062258614AF0026A786 /* NetworkController.swift in Sources */,
+				BF12B05E2586149B0026A786 /* DatabaseController.swift in Sources */,
 				BF734286257D0C950066E7C2 /* ViewController.swift in Sources */,
+				BF12B0652586152E0026A786 /* Wandeling.swift in Sources */,
 				BF9F83132534C5CC00EDFF2B /* AppDelegate.swift in Sources */,
 				BF734282257CEF920066E7C2 /* SceneDelegate.swift in Sources */,
+				BF12B068258615550026A786 /* WandelingOverzicht.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Damiaa_Wandel_App_iOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Damiaa_Wandel_App_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -301,7 +337,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Damiaa_Wandel_App_iOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Damiaa_Wandel_App_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
