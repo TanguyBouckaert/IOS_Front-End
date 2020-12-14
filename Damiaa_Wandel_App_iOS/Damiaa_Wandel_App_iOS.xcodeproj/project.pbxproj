@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF0E13D32587C8F7005B5813 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E13D22587C8F7005B5813 /* HomeScreenViewController.swift */; };
+		BF0E13D62587D59A005B5813 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E13D52587D59A005B5813 /* LoginScreenViewController.swift */; };
+		BF0E13DA2587DC14005B5813 /* WandelingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E13D92587DC14005B5813 /* WandelingCell.swift */; };
 		BF12B05E2586149B0026A786 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B05D2586149B0026A786 /* DatabaseController.swift */; };
 		BF12B062258614AF0026A786 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B061258614AF0026A786 /* NetworkController.swift */; };
 		BF12B0652586152E0026A786 /* Wandeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B0642586152E0026A786 /* Wandeling.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF0E13D22587C8F7005B5813 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		BF0E13D52587D59A005B5813 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		BF0E13D92587DC14005B5813 /* WandelingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WandelingCell.swift; sourceTree = "<group>"; };
 		BF12B05D2586149B0026A786 /* DatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
 		BF12B061258614AF0026A786 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		BF12B0642586152E0026A786 /* Wandeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wandeling.swift; sourceTree = "<group>"; };
@@ -45,6 +51,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF0E13D12587C8B9005B5813 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF0E13D22587C8F7005B5813 /* HomeScreenViewController.swift */,
+				BF0E13D52587D59A005B5813 /* LoginScreenViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BF0E13D82587DBDA005B5813 /* Special views */ = {
+			isa = PBXGroup;
+			children = (
+				BF0E13D92587DC14005B5813 /* WandelingCell.swift */,
+			);
+			path = "Special views";
+			sourceTree = "<group>";
+		};
 		BF12B059258614170026A786 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +89,7 @@
 		BF12B05C258614600026A786 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF734278257CDED20066E7C2 /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -96,6 +120,8 @@
 		BF9F83112534C5CC00EDFF2B /* Damiaa_Wandel_App_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				BF0E13D82587DBDA005B5813 /* Special views */,
+				BF0E13D12587C8B9005B5813 /* ViewControllers */,
 				BF12B095258627240026A786 /* DataModel */,
 				BF12B05C258614600026A786 /* Views */,
 				BF12B05B2586143A0026A786 /* Models */,
@@ -106,7 +132,6 @@
 				BF9F83162534C5CF00EDFF2B /* Assets.xcassets */,
 				BF9F831B2534C5CF00EDFF2B /* Info.plist */,
 				BF734274257CD9620066E7C2 /* LaunchScreen.storyboard */,
-				BF734278257CDED20066E7C2 /* Main.storyboard */,
 			);
 			path = Damiaa_Wandel_App_iOS;
 			sourceTree = "<group>";
@@ -182,10 +207,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF12B062258614AF0026A786 /* NetworkController.swift in Sources */,
+				BF0E13D32587C8F7005B5813 /* HomeScreenViewController.swift in Sources */,
+				BF0E13D62587D59A005B5813 /* LoginScreenViewController.swift in Sources */,
 				BF12B05E2586149B0026A786 /* DatabaseController.swift in Sources */,
 				BF734286257D0C950066E7C2 /* ViewController.swift in Sources */,
 				BF12B0652586152E0026A786 /* Wandeling.swift in Sources */,
 				BF9F83132534C5CC00EDFF2B /* AppDelegate.swift in Sources */,
+				BF0E13DA2587DC14005B5813 /* WandelingCell.swift in Sources */,
 				BF734282257CEF920066E7C2 /* SceneDelegate.swift in Sources */,
 				BF12B068258615550026A786 /* WandelingOverzicht.swift in Sources */,
 			);
