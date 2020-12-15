@@ -41,7 +41,7 @@ class HomeScreenViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WandelinglijstCel", for: indexPath) as! WandelingCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WandelingCell", for: indexPath) as! WandelingCell
         
         let lijstItem = wandellijstItems[indexPath.row]
         
@@ -57,11 +57,11 @@ class HomeScreenViewController: UITableViewController {
         
         var lijst : [Wandeling] = []
         
-        let wandeling1 : Wandeling = Wandeling(Id: "01", Title: "OchtendWandeling", Afstand: "10", Omschrijving: "Een wandeling om de benen te strekken.")
+        let wandeling1 : Wandeling = Wandeling(Title: "OchtendWandeling", Afstand: "10", Omschrijving: "Een wandeling om de benen te strekken.")
         
-        let wandeling2 : Wandeling = Wandeling(Id: "01", Title: "OchtendWandeling", Afstand: "10", Omschrijving: "Een wandeling om de benen te strekken.")
+        let wandeling2 : Wandeling = Wandeling(Title: "OchtendWandeling", Afstand: "10", Omschrijving: "Een wandeling om de benen te strekken.")
         
-        let wandeling3 : Wandeling = Wandeling(Id: "01", Title: "OchtendWandeling", Afstand: "10", Omschrijving: "Een wandeling om de benen te strekken.")
+        let wandeling3 : Wandeling = Wandeling(Title: "OchtendWandeling", Afstand: "10", Omschrijving: "Een wandeling om de benen te strekken.")
         
         lijst.append(wandeling1)
         lijst.append(wandeling2)

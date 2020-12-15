@@ -13,7 +13,6 @@
 		BF12B05E2586149B0026A786 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B05D2586149B0026A786 /* DatabaseController.swift */; };
 		BF12B062258614AF0026A786 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B061258614AF0026A786 /* NetworkController.swift */; };
 		BF12B0652586152E0026A786 /* Wandeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B0642586152E0026A786 /* Wandeling.swift */; };
-		BF12B068258615550026A786 /* WandelingOverzicht.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B067258615550026A786 /* WandelingOverzicht.swift */; };
 		BF734275257CD9620066E7C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF734274257CD9620066E7C2 /* LaunchScreen.storyboard */; };
 		BF734279257CDED20066E7C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF734278257CDED20066E7C2 /* Main.storyboard */; };
 		BF734282257CEF920066E7C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734281257CEF920066E7C2 /* SceneDelegate.swift */; };
@@ -29,7 +28,6 @@
 		BF12B05D2586149B0026A786 /* DatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
 		BF12B061258614AF0026A786 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		BF12B0642586152E0026A786 /* Wandeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wandeling.swift; sourceTree = "<group>"; };
-		BF12B067258615550026A786 /* WandelingOverzicht.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WandelingOverzicht.swift; sourceTree = "<group>"; };
 		BF734274257CD9620066E7C2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF734278257CDED20066E7C2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BF734281257CEF920066E7C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				BF12B0642586152E0026A786 /* Wandeling.swift */,
-				BF12B067258615550026A786 /* WandelingOverzicht.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -215,7 +212,6 @@
 				BF9F83132534C5CC00EDFF2B /* AppDelegate.swift in Sources */,
 				BF0E13DA2587DC14005B5813 /* WandelingCell.swift in Sources */,
 				BF734282257CEF920066E7C2 /* SceneDelegate.swift in Sources */,
-				BF12B068258615550026A786 /* WandelingOverzicht.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,10 +18,10 @@ class WandelingCell: UITableViewCell {
     }
     
     func update(wandeling : Wandeling){
-        title.numberOfLines = 0
-        title.lineBreakMode = NSLineBreakMode.byWordWrapping
+//        title.numberOfLines = 0
+//        title.lineBreakMode = NSLineBreakMode.byWordWrapping
         title.text = wandeling.title
-        afstand.text = wandeling.afstand
+        afstand.text = wandeling.afstand + " km"
         omschrijving.text = wandeling.omschrijving
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 
 class Wandeling: Decodable {
     
-    var id: String
+    var id: String!
     var title: String
     var afstand: String
     var omschrijving: String
@@ -21,8 +21,8 @@ class Wandeling: Decodable {
         case omschrijving = "Omschrijving"
     }
     
-    init(Id:String, Title:String, Afstand:String, Omschrijving:String) {
-        self.id = Id
+    init(Title:String, Afstand:String, Omschrijving:String) {
+        self.id = String(Int.random(in: 1..<20))
         self.title = Title
         self.afstand = Afstand
         self.omschrijving = Omschrijving
@@ -31,7 +31,7 @@ class Wandeling: Decodable {
     required init(from decoder: Decoder) throws {
         let valueContainer = try decoder.container(keyedBy: CodingKeys.self)
         
-        self.id = try valueContainer.decode(String.self, forKey: CodingKeys.id)
+//        self.id = try valueContainer.decode(String.self, forKey: CodingKeys.id)
         self.title = try valueContainer.decode(String.self, forKey: CodingKeys.title)
         self.afstand = try valueContainer.decode(String.self, forKey: CodingKeys.afstand)
         self.omschrijving = try valueContainer.decode(String.self, forKey: CodingKeys.omschrijving)
