@@ -19,6 +19,8 @@
 		BF734286257D0C950066E7C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734285257D0C950066E7C2 /* ViewController.swift */; };
 		BF9F83132534C5CC00EDFF2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F83122534C5CC00EDFF2B /* AppDelegate.swift */; };
 		BF9F83172534C5CF00EDFF2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF9F83162534C5CF00EDFF2B /* Assets.xcassets */; };
+		BFFCDAA8258A763100D17F2E /* AddWandelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCDAA7258A763100D17F2E /* AddWandelingViewController.swift */; };
+		BFFCDAB6258A8A1D00D17F2E /* WadelingForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCDAB5258A8A1D00D17F2E /* WadelingForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		BF9F83122534C5CC00EDFF2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF9F83162534C5CF00EDFF2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF9F831B2534C5CF00EDFF2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFFCDAA7258A763100D17F2E /* AddWandelingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWandelingViewController.swift; sourceTree = "<group>"; };
+		BFFCDAB5258A8A1D00D17F2E /* WadelingForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WadelingForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			children = (
 				BF0E13D22587C8F7005B5813 /* HomeScreenViewController.swift */,
 				BF0E13D52587D59A005B5813 /* LoginScreenViewController.swift */,
+				BFFCDAA7258A763100D17F2E /* AddWandelingViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -62,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				BF0E13D92587DC14005B5813 /* WandelingCell.swift */,
+				BFFCDAB5258A8A1D00D17F2E /* WadelingForm.swift */,
 			);
 			path = "Special views";
 			sourceTree = "<group>";
@@ -203,6 +209,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFFCDAB6258A8A1D00D17F2E /* WadelingForm.swift in Sources */,
+				BFFCDAA8258A763100D17F2E /* AddWandelingViewController.swift in Sources */,
 				BF12B062258614AF0026A786 /* NetworkController.swift in Sources */,
 				BF0E13D32587C8F7005B5813 /* HomeScreenViewController.swift in Sources */,
 				BF0E13D62587D59A005B5813 /* LoginScreenViewController.swift in Sources */,
@@ -276,6 +284,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -330,6 +339,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

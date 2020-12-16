@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zcf-2q-OGz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zcf-2q-OGz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,23 +25,103 @@
             </objects>
             <point key="canvasLocation" x="1712" y="567"/>
         </scene>
-        <!--Create Wandeling Controller-->
+        <!--Add Wandeling Controller-->
         <scene sceneID="7ey-b4-RKE">
             <objects>
-                <viewController id="f5u-nP-vR2" userLabel="Create Wandeling Controller" sceneMemberID="viewController">
+                <viewController id="f5u-nP-vR2" userLabel="Add Wandeling Controller" customClass="WandelingForm" customModule="Damiaa_Wandel_App_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z6I-lP-IYX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="ePk-0X-JXP" userLabel="WandelingForm">
+                                <rect key="frame" x="30" y="118" width="354" height="157"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ETy-k6-dsF" userLabel="title">
+                                        <rect key="frame" x="8" y="8" width="338" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Naam Wandeling   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ElF-az-VRq" userLabel="naam">
+                                                <rect key="frame" x="0.0" y="0.0" width="142" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ochtend Wandeling" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ByN-Ey-bns" userLabel="input title">
+                                                <rect key="frame" x="142" y="0.0" width="196" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="input_title:" destination="Bo8-cF-jsg" eventType="editingDidEnd" id="oCc-rX-URT"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VaR-r1-yGG" userLabel="afstand">
+                                        <rect key="frame" x="8" y="45" width="338" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Afstand     " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBb-1P-ROS" userLabel="afstand">
+                                                <rect key="frame" x="0.0" y="0.0" width="80.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9da-dB-OZ0" userLabel="input afstand">
+                                                <rect key="frame" x="80.5" y="0.0" width="257.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZqU-MQ-3aN" userLabel="omschrijving">
+                                        <rect key="frame" x="8" y="82" width="338" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Omschrijving   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBS-ta-8qN" userLabel="omschrijving">
+                                                <rect key="frame" x="0.0" y="0.0" width="113" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s5M-py-r4l" userLabel="input omschrijving">
+                                                <rect key="frame" x="113" y="0.0" width="225" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yG5-bi-Dmf">
+                                        <rect key="frame" x="8" y="119" width="338" height="30"/>
+                                        <state key="normal" title="Add Wandeling"/>
+                                        <connections>
+                                            <action selector="maakWandeling:" destination="f5u-nP-vR2" eventType="touchUpInside" id="Y0v-hA-uak"/>
+                                            <action selector="maakWandeling:" destination="Bo8-cF-jsg" eventType="touchDown" id="cia-gy-kYL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="VIU-BS-3Hd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VIU-BS-3Hd" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ePk-0X-JXP" secondAttribute="bottom" constant="30" id="6SO-8h-y6Z"/>
+                            <constraint firstItem="ePk-0X-JXP" firstAttribute="top" secondItem="VIU-BS-3Hd" secondAttribute="top" constant="30" id="OuH-ET-at0"/>
+                            <constraint firstItem="VIU-BS-3Hd" firstAttribute="trailing" secondItem="ePk-0X-JXP" secondAttribute="trailing" constant="30" id="XUg-L1-7Sz"/>
+                            <constraint firstItem="ePk-0X-JXP" firstAttribute="leading" secondItem="VIU-BS-3Hd" secondAttribute="leading" constant="30" id="vCn-SJ-iPh"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="qbC-bH-DRd"/>
                     <navigationItem key="navigationItem" id="qGt-rq-75y"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="input_afstand" destination="9da-dB-OZ0" id="yGh-6z-cXd"/>
+                        <outlet property="input_omschrijving" destination="s5M-py-r4l" id="gew-Oh-f54"/>
+                        <outlet property="input_title" destination="ByN-Ey-bns" id="Q7A-rC-rIf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OtV-DU-bBw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Bo8-cF-jsg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2790" y="567"/>
+            <point key="canvasLocation" x="2789.8550724637685" y="566.51785714285711"/>
         </scene>
         <!--Tab Bar controller-->
         <scene sceneID="o44-90-rhK">
@@ -61,10 +141,10 @@
             </objects>
             <point key="canvasLocation" x="165" y="147"/>
         </scene>
-        <!--Login Controller-->
+        <!--Welkom Controller-->
         <scene sceneID="8li-8n-bpX">
             <objects>
-                <viewController title="HomeController" id="zcf-2q-OGz" userLabel="Login Controller" sceneMemberID="viewController">
+                <viewController title="HomeController" id="zcf-2q-OGz" userLabel="Welkom Controller" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aXn-AT-pdz" customClass="ContentView" customModule="Damiaa_Wandel_App_iOS" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,6 +278,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
