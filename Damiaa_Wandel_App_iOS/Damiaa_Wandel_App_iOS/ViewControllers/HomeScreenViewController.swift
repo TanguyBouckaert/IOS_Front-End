@@ -8,30 +8,34 @@
 import UIKit
 import SwiftUI
 
+
 class HomeScreenViewController: UITableViewController {
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-//    var wandellijstItems : Result<Wandeling>!
     var wandellijstItems : [Wandeling]!
-//    var legelijst : UILabel!
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        wandellijstItems = [Wandeling]()
+        fetch()
+        print("Hallo")
         self.tableView.rowHeight = 135
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        wandellijstItems = initOverzicht()
+//        wandellijstItems = initOverzicht()
+        
         tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if wandellijstItems.count == 0 {
-            self.showToast(message: "De lijst is leeg!")
+            print("De lijst is leeg!!!")
         }else{
             self.tableView.backgroundView = nil
             self.tableView.separatorStyle = .singleLine
@@ -52,40 +56,43 @@ class HomeScreenViewController: UITableViewController {
         return cell
     }
     
-    
-    public func initOverzicht() -> [Wandeling]{
-        
-        var lijst : [Wandeling] = []
-        
-        let wandeling1 : Wandeling = Wandeling(Title: "OchtendWandeling", Afstand: "10", Omschrijving: "Een wandeling om de benen te strekken.")
-        
-        let wandeling2 : Wandeling = Wandeling(Title: "OchtendWandeling", Afstand: "10", Omschrijving: "Een wandeling om de benen te strekken.")
-        
-        let wandeling3 : Wandeling = Wandeling(Title: "OchtendWandeling", Afstand: "10", Omschrijving: "Een wandeling om de benen te strekken.")
-        
-        lijst.append(wandeling1)
-        lijst.append(wandeling2)
-        lijst.append(wandeling3)
-        
-        return lijst
+    func fetch() {
+        do {
+            
+            self.wandellijstItems = try context.fetch(Wandeling.fetchRequest())
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+            print("langs fetch gepasseerd!!!!")
+        } catch {
+            print("An error occured wail fetching data!")
+        }
     }
     
-    func showToast(message : String) {
-
-        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-100, width: 150, height: 35))
-        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
-        toastLabel.textColor = UIColor.white
-        toastLabel.textAlignment = .center;
-        toastLabel.font = UIFont(name: "Montserrat-Light", size: 12.0)
-        toastLabel.text = message
-        toastLabel.alpha = 1.0
-        toastLabel.layer.cornerRadius = 10;
-        toastLabel.clipsToBounds  =  true
-        self.view.addSubview(toastLabel)
-        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
-            toastLabel.alpha = 0.0
-        }, completion: {(isCompleted) in
-            toastLabel.removeFromSuperview()
-        })
+    
+    public func reloadData() {
+        self.tableView.reloadData()
+        print("tabel is herladen!!!!")
     }
+    
+    
+    
+//    public func initOverzicht() -> [Wandeling]{
+//
+//        var lijst : [Wandeling] = []
+//
+//        let wandeling1 : MockWandeling = MockWandeling(Title: "OchtendWandeling", Afstand: "10", Omschrijving: "Een wandeling om de benen te strekken.")
+//
+//        let wandeling2 : MockWandeling = MockWandeling(Title: "OchtendWandeling", Afstand: "10", Omschrijving: "Een wandeling om de benen te strekken.")
+//
+//        let wandeling3 : MockWandeling = MockWandeling(Title: "OchtendWandeling", Afstand: "10", Omschrijving: "Een wandeling om de benen te strekken.")
+//
+//        lijst.append(wandeling1)
+//        lijst.append(wandeling2)
+//        lijst.append(wandeling3)
+//
+//        return lijst
+//    }
+    
+    
 }

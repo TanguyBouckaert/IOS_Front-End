@@ -21,7 +21,7 @@ class WandelingCell: UITableViewCell {
 //        title.numberOfLines = 0
 //        title.lineBreakMode = NSLineBreakMode.byWordWrapping
         title.text = wandeling.title
-        afstand.text = wandeling.afstand + " km"
+        afstand.text = wandeling.afstand
         omschrijving.text = wandeling.omschrijving
     }
 }
