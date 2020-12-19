@@ -258,6 +258,9 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="O14-gt-lWa" userLabel="Add Wandeling"/>
                     <navigationItem key="navigationItem" id="T8W-5g-5dv"/>
+                    <connections>
+                        <outlet property="tableView" destination="wm8-0N-pUR" id="vFy-2j-Nfl"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rsE-zE-Clt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

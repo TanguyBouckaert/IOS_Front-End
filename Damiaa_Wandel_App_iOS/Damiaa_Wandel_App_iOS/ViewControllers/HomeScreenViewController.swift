@@ -9,52 +9,29 @@ import UIKit
 import SwiftUI
 
 
-class HomeScreenViewController: UITableViewController {
+class HomeScreenViewController: UIViewController {
     
+    @IBOutlet var tableView : UITableView!
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    var wandellijstItems : [Wandeling]!
+    var wandellijstItems : [Wandeling] = [Wandeling]()
 
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        wandellijstItems = [Wandeling]()
-        fetch()
-        print("Hallo")
-        self.tableView.rowHeight = 135
         
+        tableView.delegate = self
+        tableView.dataSource = self
+
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+//    override func viewWillAppear(_ animated: Bool) {
 //        wandellijstItems = initOverzicht()
-        
-        tableView.reloadData()
-    }
+//
+//        tableView.reloadData()
+//    }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if wandellijstItems.count == 0 {
-            print("De lijst is leeg!!!")
-        }else{
-            self.tableView.backgroundView = nil
-            self.tableView.separatorStyle = .singleLine
-        }
-        
-        return wandellijstItems.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WandelingCell", for: indexPath) as! WandelingCell
-        
-        let lijstItem = wandellijstItems[indexPath.row]
-        
-        DispatchQueue.main.async {
-            cell.update(wandeling: lijstItem)
-        }
-        
-        return cell
-    }
     
     func fetch() {
         do {
@@ -77,22 +54,59 @@ class HomeScreenViewController: UITableViewController {
     
     
     
-//    public func initOverzicht() -> [Wandeling]{
-//
-//        var lijst : [Wandeling] = []
-//
-//        let wandeling1 : MockWandeling = MockWandeling(Title: "OchtendWandeling", Afstand: "10", Omschrijving: "Een wandeling om de benen te strekken.")
-//
+    
+    
+    
+    public func initOverzicht() -> [Wandeling]{
+
+        var lijst : [Wandeling] = []
+
+        let wandeling1 : Wandeling = Wandeling()
+        wandeling1.title = "Ochtendwandeling"
+        wandeling1.afstand = "50"
+        wandeling1.omschrijving = "Een wandeling om de benen te strekken."
+
 //        let wandeling2 : MockWandeling = MockWandeling(Title: "OchtendWandeling", Afstand: "10", Omschrijving: "Een wandeling om de benen te strekken.")
 //
 //        let wandeling3 : MockWandeling = MockWandeling(Title: "OchtendWandeling", Afstand: "10", Omschrijving: "Een wandeling om de benen te strekken.")
-//
-//        lijst.append(wandeling1)
+
+        lijst.append(wandeling1)
 //        lijst.append(wandeling2)
 //        lijst.append(wandeling3)
-//
-//        return lijst
-//    }
+
+        return lijst
+    }
+    
+    
+}
+
+extension HomeScreenViewController: UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt: IndexPath){
+        print("you tapped me!")
+    }
+    
+}
+
+extension HomeScreenViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return wandellijstItems.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WandelingCell", for: indexPath) as! WandelingCell
+        
+//        cell.title?.text = wandellijstItems[indexPath.row].title
+//        cell.afstand?.text = wandellijstItems[indexPath.row].afstand
+//        cell.omschrijving?.text = wandellijstItems[indexPath.row].omschrijving
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+        
+        return cell
+    }
     
     
 }

@@ -42,9 +42,10 @@ class WandelingForm: UIViewController {
         do{
             try self.context.save()
             print("wandeling is opgeslaan!!!!")
-            self.tableview.reloadData()
+            
         }catch{
             print("Could not add Wandeling!")
         }
+        self.tableview.reloadData()
     }
 }
