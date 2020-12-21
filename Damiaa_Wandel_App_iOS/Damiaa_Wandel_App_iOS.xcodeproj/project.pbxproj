@@ -13,6 +13,8 @@
 		BF12B05E2586149B0026A786 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B05D2586149B0026A786 /* DatabaseController.swift */; };
 		BF12B062258614AF0026A786 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B061258614AF0026A786 /* NetworkController.swift */; };
 		BF12B0652586152E0026A786 /* MockWandeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B0642586152E0026A786 /* MockWandeling.swift */; };
+		BF26A7CC2590B0CF00CB4FE2 /* Wandeling+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A7CA2590B0CF00CB4FE2 /* Wandeling+CoreDataClass.swift */; };
+		BF26A7CD2590B0CF00CB4FE2 /* Wandeling+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A7CB2590B0CF00CB4FE2 /* Wandeling+CoreDataProperties.swift */; };
 		BF734275257CD9620066E7C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF734274257CD9620066E7C2 /* LaunchScreen.storyboard */; };
 		BF734279257CDED20066E7C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF734278257CDED20066E7C2 /* Main.storyboard */; };
 		BF734282257CEF920066E7C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734281257CEF920066E7C2 /* SceneDelegate.swift */; };
@@ -20,8 +22,6 @@
 		BF9F83132534C5CC00EDFF2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F83122534C5CC00EDFF2B /* AppDelegate.swift */; };
 		BF9F83172534C5CF00EDFF2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF9F83162534C5CF00EDFF2B /* Assets.xcassets */; };
 		BFD6FFDD258BCE4200152F5E /* WandelingModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFD6FFDB258BCE4200152F5E /* WandelingModel.xcdatamodeld */; };
-		BFD6FFE1258BD22A00152F5E /* Wandeling+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD6FFDF258BD22A00152F5E /* Wandeling+CoreDataClass.swift */; };
-		BFD6FFE2258BD22A00152F5E /* Wandeling+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD6FFE0258BD22A00152F5E /* Wandeling+CoreDataProperties.swift */; };
 		BFFCDAA8258A763100D17F2E /* AddWandelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCDAA7258A763100D17F2E /* AddWandelingViewController.swift */; };
 		BFFCDAB6258A8A1D00D17F2E /* WadelingForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCDAB5258A8A1D00D17F2E /* WadelingForm.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +33,8 @@
 		BF12B05D2586149B0026A786 /* DatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
 		BF12B061258614AF0026A786 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		BF12B0642586152E0026A786 /* MockWandeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWandeling.swift; sourceTree = "<group>"; };
+		BF26A7CA2590B0CF00CB4FE2 /* Wandeling+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wandeling+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BF26A7CB2590B0CF00CB4FE2 /* Wandeling+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wandeling+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BF734274257CD9620066E7C2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF734278257CDED20066E7C2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BF734281257CEF920066E7C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,8 +44,6 @@
 		BF9F83162534C5CF00EDFF2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF9F831B2534C5CF00EDFF2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFD6FFDC258BCE4200152F5E /* WandelingModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WandelingModel.xcdatamodel; sourceTree = "<group>"; };
-		BFD6FFDF258BD22A00152F5E /* Wandeling+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wandeling+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BFD6FFE0258BD22A00152F5E /* Wandeling+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wandeling+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BFFCDAA7258A763100D17F2E /* AddWandelingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWandelingViewController.swift; sourceTree = "<group>"; };
 		BFFCDAB5258A8A1D00D17F2E /* WadelingForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WadelingForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,8 +114,8 @@
 		BF9F83062534C5CC00EDFF2B = {
 			isa = PBXGroup;
 			children = (
-				BFD6FFDF258BD22A00152F5E /* Wandeling+CoreDataClass.swift */,
-				BFD6FFE0258BD22A00152F5E /* Wandeling+CoreDataProperties.swift */,
+				BF26A7CA2590B0CF00CB4FE2 /* Wandeling+CoreDataClass.swift */,
+				BF26A7CB2590B0CF00CB4FE2 /* Wandeling+CoreDataProperties.swift */,
 				BF9F83112534C5CC00EDFF2B /* Damiaa_Wandel_App_iOS */,
 				BF9F83102534C5CC00EDFF2B /* Products */,
 			);
@@ -218,16 +218,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF26A7CD2590B0CF00CB4FE2 /* Wandeling+CoreDataProperties.swift in Sources */,
 				BFFCDAB6258A8A1D00D17F2E /* WadelingForm.swift in Sources */,
+				BF26A7CC2590B0CF00CB4FE2 /* Wandeling+CoreDataClass.swift in Sources */,
 				BFFCDAA8258A763100D17F2E /* AddWandelingViewController.swift in Sources */,
 				BF12B062258614AF0026A786 /* NetworkController.swift in Sources */,
 				BF0E13D32587C8F7005B5813 /* HomeScreenViewController.swift in Sources */,
 				BF0E13D62587D59A005B5813 /* LoginScreenViewController.swift in Sources */,
 				BF12B05E2586149B0026A786 /* DatabaseController.swift in Sources */,
 				BF734286257D0C950066E7C2 /* ViewController.swift in Sources */,
-				BFD6FFE1258BD22A00152F5E /* Wandeling+CoreDataClass.swift in Sources */,
 				BF12B0652586152E0026A786 /* MockWandeling.swift in Sources */,
-				BFD6FFE2258BD22A00152F5E /* Wandeling+CoreDataProperties.swift in Sources */,
 				BF9F83132534C5CC00EDFF2B /* AppDelegate.swift in Sources */,
 				BFD6FFDD258BCE4200152F5E /* WandelingModel.xcdatamodeld in Sources */,
 				BF0E13DA2587DC14005B5813 /* WandelingCell.swift in Sources */,

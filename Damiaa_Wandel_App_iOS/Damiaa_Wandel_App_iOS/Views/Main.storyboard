@@ -28,7 +28,7 @@
         <!--Add Wandeling Controller-->
         <scene sceneID="7ey-b4-RKE">
             <objects>
-                <viewController id="f5u-nP-vR2" userLabel="Add Wandeling Controller" customClass="WandelingForm" customModule="Damiaa_Wandel_App_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="f5u-nP-vR2" userLabel="Add Wandeling Controller" customClass="AddWandelingViewController" customModule="Damiaa_Wandel_App_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z6I-lP-IYX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,6 +91,7 @@
                                         <rect key="frame" x="8" y="119" width="338" height="30"/>
                                         <state key="normal" title="Add Wandeling"/>
                                         <connections>
+                                            <action selector="addWandeling:" destination="f5u-nP-vR2" eventType="touchUpInside" id="ygw-WR-5ow"/>
                                             <action selector="maakWandeling:" destination="f5u-nP-vR2" eventType="touchUpInside" id="Y0v-hA-uak"/>
                                             <action selector="maakWandeling:" destination="Bo8-cF-jsg" eventType="touchDown" id="cia-gy-kYL"/>
                                         </connections>
@@ -113,9 +114,9 @@
                     <navigationItem key="navigationItem" id="qGt-rq-75y"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="input_afstand" destination="9da-dB-OZ0" id="yGh-6z-cXd"/>
-                        <outlet property="input_omschrijving" destination="s5M-py-r4l" id="gew-Oh-f54"/>
-                        <outlet property="input_title" destination="ByN-Ey-bns" id="Q7A-rC-rIf"/>
+                        <outlet property="input_afstand" destination="9da-dB-OZ0" id="kOs-LI-NeX"/>
+                        <outlet property="input_omschrijving" destination="s5M-py-r4l" id="8Vu-6c-1fb"/>
+                        <outlet property="input_title" destination="ByN-Ey-bns" id="UaH-hQ-sJ5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OtV-DU-bBw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -251,15 +252,11 @@
                             </tableViewCell>
                         </prototypes>
                         <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="61J-AE-QTv" id="f8m-W1-uAi"/>
-                            <outlet property="delegate" destination="61J-AE-QTv" id="vz7-cf-jqu"/>
-                        </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="O14-gt-lWa" userLabel="Add Wandeling"/>
                     <navigationItem key="navigationItem" id="T8W-5g-5dv"/>
                     <connections>
-                        <outlet property="tableView" destination="wm8-0N-pUR" id="vFy-2j-Nfl"/>
+                        <outlet property="tableView" destination="wm8-0N-pUR" id="6Gi-i0-eq6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rsE-zE-Clt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

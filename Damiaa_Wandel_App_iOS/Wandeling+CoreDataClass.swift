@@ -2,7 +2,7 @@
 //  Wandeling+CoreDataClass.swift
 //  Damiaa_Wandel_App_iOS
 //
-//  Created by Tanguy Bouckaert on 17/12/2020.
+//  Created by Tanguy Bouckaert on 21/12/2020.
 //
 //
 
@@ -11,6 +11,5 @@ import CoreData
 
 @objc(Wandeling)
 public class Wandeling: NSManagedObject {
-
 
 }

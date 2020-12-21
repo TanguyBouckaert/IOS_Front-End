@@ -11,10 +11,10 @@ import SwiftUI
 
 class HomeScreenViewController: UIViewController {
     
-    @IBOutlet var tableView : UITableView!
+    @IBOutlet weak var tableView : UITableView!
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    var wandellijstItems : [Wandeling] = [Wandeling]()
+    var items : [Wandeling]?
 
     
     
@@ -24,7 +24,23 @@ class HomeScreenViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
 
+        fetchWandelingen()
     }
+    
+    func fetchWandelingen(){
+        
+        do{
+            self.items = try context.fetch(Wandeling.fetchRequest())
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }catch{
+            print("Something went wrong will fetching wandelingen!!!!")
+        }
+    }
+    
+    
     
 //    override func viewWillAppear(_ animated: Bool) {
 //        wandellijstItems = initOverzicht()
@@ -32,30 +48,24 @@ class HomeScreenViewController: UIViewController {
 //        tableView.reloadData()
 //    }
     
-    
-    func fetch() {
-        do {
-            
-            self.wandellijstItems = try context.fetch(Wandeling.fetchRequest())
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-            print("langs fetch gepasseerd!!!!")
-        } catch {
-            print("An error occured wail fetching data!")
-        }
-    }
+//    func fetch() {
+//        do {
+//
+//            self.items = try context.fetch(Wandeling.fetchRequest())
+//            DispatchQueue.main.async {
+//                self.tableView.reloadData()
+//            }
+//            print("langs fetch gepasseerd!!!!")
+//        } catch {
+//            print("An error occured wail fetching data!")
+//        }
+//    }
     
     
     public func reloadData() {
         self.tableView.reloadData()
         print("tabel is herladen!!!!")
     }
-    
-    
-    
-    
-    
     
     public func initOverzicht() -> [Wandeling]{
 
@@ -77,6 +87,9 @@ class HomeScreenViewController: UIViewController {
         return lijst
     }
     
+    func gettableview() -> UITableView{
+        return self.tableView
+    }
     
 }
 
@@ -91,19 +104,16 @@ extension HomeScreenViewController: UITableViewDelegate{
 extension HomeScreenViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return wandellijstItems.count
+        return self.items?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WandelingCell", for: indexPath) as! WandelingCell
         
-//        cell.title?.text = wandellijstItems[indexPath.row].title
-//        cell.afstand?.text = wandellijstItems[indexPath.row].afstand
-//        cell.omschrijving?.text = wandellijstItems[indexPath.row].omschrijving
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WandelingCell", for: indexPath)
         
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
+        let wandeling = self.items![indexPath.row]
+        
+        cell.textLabel?.text = wandeling.title
         
         return cell
     }

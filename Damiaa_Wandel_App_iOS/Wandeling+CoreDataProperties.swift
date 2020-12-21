@@ -2,7 +2,7 @@
 //  Wandeling+CoreDataProperties.swift
 //  Damiaa_Wandel_App_iOS
 //
-//  Created by Tanguy Bouckaert on 17/12/2020.
+//  Created by Tanguy Bouckaert on 21/12/2020.
 //
 //
 
@@ -16,9 +16,9 @@ extension Wandeling {
         return NSFetchRequest<Wandeling>(entityName: "Wandeling")
     }
 
-    @NSManaged public var title: String?
     @NSManaged public var afstand: String?
     @NSManaged public var omschrijving: String?
+    @NSManaged public var title: String?
 
 }
 
