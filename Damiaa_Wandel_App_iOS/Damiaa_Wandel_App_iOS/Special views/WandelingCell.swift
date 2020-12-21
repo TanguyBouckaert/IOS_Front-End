@@ -15,11 +15,11 @@ class WandelingCell: UITableViewCell {
     
     override class func awakeFromNib() {
         super.awakeFromNib()
+        
     }
     
     func update(wandeling : Wandeling){
-//        title.numberOfLines = 0
-//        title.lineBreakMode = NSLineBreakMode.byWordWrapping
+        title.numberOfLines = 3
         title.text = wandeling.title
         afstand.text = wandeling.afstand
         omschrijving.text = wandeling.omschrijving

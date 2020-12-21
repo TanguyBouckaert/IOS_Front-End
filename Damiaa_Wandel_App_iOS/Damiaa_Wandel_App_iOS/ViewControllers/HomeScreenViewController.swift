@@ -11,12 +11,10 @@ import SwiftUI
 
 class HomeScreenViewController: UIViewController {
     
-    @IBOutlet weak var tableView : UITableView!
+    @IBOutlet var tableView : UITableView!
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var items : [Wandeling]?
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +22,11 @@ class HomeScreenViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
 
+        fetchWandelingen()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         fetchWandelingen()
     }
     
@@ -41,12 +44,63 @@ class HomeScreenViewController: UIViewController {
     }
     
     
+}
+
+extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource{
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        wandellijstItems = initOverzicht()
-//
-//        tableView.reloadData()
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        print("you tapped me!" + self.items![indexPath.row].title!)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(items?.count)
+        return self.items?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WandelingCell", for: indexPath) as! WandelingCell
+        
+        let wandeling = self.items![indexPath.row]
+        
+        cell.update(wandeling: wandeling)
+//        cell.title.text = "Hard coded"
+//        cell.afstand.text = "90"
+//        cell.omschrijving.text = "Toffe wandeling"
+        
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive, title: "Verwijder") { (action, view, completionHandler) in
+            
+            //TODO: Which wandeling to remove
+            let wandelingToRemove = self.items![indexPath.row]
+            
+            //TODO: Remove the wandeling
+            self.context.delete(wandelingToRemove)
+            
+            //TODO: Save the data
+            do{
+                try self.context.save()
+            }catch{
+                print("Error while deleting a wandeling!")
+            }
+            
+            //TODO: Refetch the data
+            self.fetchWandelingen()
+            
+        }
+        
+        return UISwipeActionsConfiguration(actions: [action])
+    }
+}
+
+
+
+
+
     
 //    func fetch() {
 //        do {
@@ -62,61 +116,27 @@ class HomeScreenViewController: UIViewController {
 //    }
     
     
-    public func reloadData() {
-        self.tableView.reloadData()
-        print("tabel is herladen!!!!")
-    }
+//    public func reloadData() {
+//        self.tableView.reloadData()
+//        print("tabel is herladen!!!!")
+//    }
     
-    public func initOverzicht() -> [Wandeling]{
-
-        var lijst : [Wandeling] = []
-
-        let wandeling1 : Wandeling = Wandeling()
-        wandeling1.title = "Ochtendwandeling"
-        wandeling1.afstand = "50"
-        wandeling1.omschrijving = "Een wandeling om de benen te strekken."
-
+//    public func initOverzicht() -> [Wandeling]{
+//
+//        var lijst : [Wandeling] = []
+//
+//        let wandeling1 : Wandeling = Wandeling()
+//        wandeling1.title = "Ochtendwandeling"
+//        wandeling1.afstand = "50"
+//        wandeling1.omschrijving = "Een wandeling om de benen te strekken."
+//
 //        let wandeling2 : MockWandeling = MockWandeling(Title: "OchtendWandeling", Afstand: "10", Omschrijving: "Een wandeling om de benen te strekken.")
 //
 //        let wandeling3 : MockWandeling = MockWandeling(Title: "OchtendWandeling", Afstand: "10", Omschrijving: "Een wandeling om de benen te strekken.")
-
-        lijst.append(wandeling1)
+//
+//        lijst.append(wandeling1)
 //        lijst.append(wandeling2)
 //        lijst.append(wandeling3)
-
-        return lijst
-    }
-    
-    func gettableview() -> UITableView{
-        return self.tableView
-    }
-    
-}
-
-extension HomeScreenViewController: UITableViewDelegate{
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt: IndexPath){
-        print("you tapped me!")
-    }
-    
-}
-
-extension HomeScreenViewController: UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return self.items?.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WandelingCell", for: indexPath)
-        
-        let wandeling = self.items![indexPath.row]
-        
-        cell.textLabel?.text = wandeling.title
-        
-        return cell
-    }
-    
-    
-}
+//
+//        return lijst
+//    }

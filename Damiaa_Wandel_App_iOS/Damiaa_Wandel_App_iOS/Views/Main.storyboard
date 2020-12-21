@@ -92,7 +92,6 @@
                                         <state key="normal" title="Add Wandeling"/>
                                         <connections>
                                             <action selector="addWandeling:" destination="f5u-nP-vR2" eventType="touchUpInside" id="ygw-WR-5ow"/>
-                                            <action selector="maakWandeling:" destination="f5u-nP-vR2" eventType="touchUpInside" id="Y0v-hA-uak"/>
                                             <action selector="maakWandeling:" destination="Bo8-cF-jsg" eventType="touchDown" id="cia-gy-kYL"/>
                                         </connections>
                                     </button>
@@ -209,16 +208,16 @@
         <scene sceneID="Cg2-4Z-L4h">
             <objects>
                 <tableViewController id="61J-AE-QTv" userLabel="Overzicht" customClass="HomeScreenViewController" customModule="Damiaa_Wandel_App_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wm8-0N-pUR">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="107" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wm8-0N-pUR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WandelingCell" rowHeight="114" id="Ppw-pD-EcB" customClass="WandelingCell" customModule="Damiaa_Wandel_App_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="114"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WandelingCell" id="Ppw-pD-EcB" customClass="WandelingCell" customModule="Damiaa_Wandel_App_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="107"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ppw-pD-EcB" id="dYh-vg-J4k">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="114"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ppw-pD-EcB" translatesAutoresizingMaskIntoConstraints="NO" id="dYh-vg-J4k">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0f-EO-HA8">
@@ -228,7 +227,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Omschrijving" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VK9-QA-CMP">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Omschrijving" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="212" translatesAutoresizingMaskIntoConstraints="NO" id="VK9-QA-CMP">
                                             <rect key="frame" x="191" y="11" width="212" height="92"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -245,9 +244,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="afstand" destination="nwW-MG-kEZ" id="2Wv-Kn-u4W"/>
-                                    <outlet property="omschrijving" destination="VK9-QA-CMP" id="AwL-jh-Nbq"/>
-                                    <outlet property="title" destination="u0f-EO-HA8" id="Oi1-iB-uFm"/>
+                                    <outlet property="afstand" destination="nwW-MG-kEZ" id="d2F-dY-AdV"/>
+                                    <outlet property="omschrijving" destination="VK9-QA-CMP" id="EhY-Ku-qJs"/>
+                                    <outlet property="title" destination="u0f-EO-HA8" id="7zC-sB-ghR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -261,7 +260,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rsE-zE-Clt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2791" y="-139"/>
+            <point key="canvasLocation" x="2789.8550724637685" y="-139.28571428571428"/>
         </scene>
     </scenes>
     <resources>
