@@ -50,6 +50,13 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         print("you tapped me!" + self.items![indexPath.row].title!)
+        
+        let selectedWandeling = self.items![indexPath.row]
+        
+        if let viewController = storyboard?.instantiateViewController(withIdentifier: "DetailWandeling") as? DetailWandelingViewController {
+            viewController.setUpDetails(wandelingDetails: selectedWandeling)
+        navigationController?.pushViewController(viewController, animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -64,10 +71,6 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource{
         let wandeling = self.items![indexPath.row]
         
         cell.update(wandeling: wandeling)
-//        cell.title.text = "Hard coded"
-//        cell.afstand.text = "90"
-//        cell.omschrijving.text = "Toffe wandeling"
-        
         
         return cell
     }

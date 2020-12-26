@@ -15,6 +15,7 @@
 		BF12B0652586152E0026A786 /* MockWandeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B0642586152E0026A786 /* MockWandeling.swift */; };
 		BF26A7CC2590B0CF00CB4FE2 /* Wandeling+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A7CA2590B0CF00CB4FE2 /* Wandeling+CoreDataClass.swift */; };
 		BF26A7CD2590B0CF00CB4FE2 /* Wandeling+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A7CB2590B0CF00CB4FE2 /* Wandeling+CoreDataProperties.swift */; };
+		BF5086752597CD850030BCB2 /* DetailWandelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5086742597CD850030BCB2 /* DetailWandelingViewController.swift */; };
 		BF734275257CD9620066E7C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF734274257CD9620066E7C2 /* LaunchScreen.storyboard */; };
 		BF734279257CDED20066E7C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF734278257CDED20066E7C2 /* Main.storyboard */; };
 		BF734282257CEF920066E7C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734281257CEF920066E7C2 /* SceneDelegate.swift */; };
@@ -35,6 +36,7 @@
 		BF12B0642586152E0026A786 /* MockWandeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWandeling.swift; sourceTree = "<group>"; };
 		BF26A7CA2590B0CF00CB4FE2 /* Wandeling+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wandeling+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BF26A7CB2590B0CF00CB4FE2 /* Wandeling+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wandeling+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BF5086742597CD850030BCB2 /* DetailWandelingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWandelingViewController.swift; sourceTree = "<group>"; };
 		BF734274257CD9620066E7C2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF734278257CDED20066E7C2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BF734281257CEF920066E7C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				BF0E13D22587C8F7005B5813 /* HomeScreenViewController.swift */,
 				BF0E13D52587D59A005B5813 /* LoginScreenViewController.swift */,
 				BFFCDAA7258A763100D17F2E /* AddWandelingViewController.swift */,
+				BF5086742597CD850030BCB2 /* DetailWandelingViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				BF12B0652586152E0026A786 /* MockWandeling.swift in Sources */,
 				BF9F83132534C5CC00EDFF2B /* AppDelegate.swift in Sources */,
 				BFD6FFDD258BCE4200152F5E /* WandelingModel.xcdatamodeld in Sources */,
+				BF5086752597CD850030BCB2 /* DetailWandelingViewController.swift in Sources */,
 				BF0E13DA2587DC14005B5813 /* WandelingCell.swift in Sources */,
 				BF734282257CEF920066E7C2 /* SceneDelegate.swift in Sources */,
 			);
