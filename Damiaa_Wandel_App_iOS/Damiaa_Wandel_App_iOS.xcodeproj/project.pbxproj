@@ -24,7 +24,6 @@
 		BF9F83172534C5CF00EDFF2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF9F83162534C5CF00EDFF2B /* Assets.xcassets */; };
 		BFD6FFDD258BCE4200152F5E /* WandelingModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFD6FFDB258BCE4200152F5E /* WandelingModel.xcdatamodeld */; };
 		BFFCDAA8258A763100D17F2E /* AddWandelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCDAA7258A763100D17F2E /* AddWandelingViewController.swift */; };
-		BFFCDAB6258A8A1D00D17F2E /* WadelingForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCDAB5258A8A1D00D17F2E /* WadelingForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +46,6 @@
 		BF9F831B2534C5CF00EDFF2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFD6FFDC258BCE4200152F5E /* WandelingModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WandelingModel.xcdatamodel; sourceTree = "<group>"; };
 		BFFCDAA7258A763100D17F2E /* AddWandelingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWandelingViewController.swift; sourceTree = "<group>"; };
-		BFFCDAB5258A8A1D00D17F2E /* WadelingForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WadelingForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				BF0E13D92587DC14005B5813 /* WandelingCell.swift */,
-				BFFCDAB5258A8A1D00D17F2E /* WadelingForm.swift */,
 			);
 			path = "Special views";
 			sourceTree = "<group>";
@@ -222,7 +219,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF26A7CD2590B0CF00CB4FE2 /* Wandeling+CoreDataProperties.swift in Sources */,
-				BFFCDAB6258A8A1D00D17F2E /* WadelingForm.swift in Sources */,
 				BF26A7CC2590B0CF00CB4FE2 /* Wandeling+CoreDataClass.swift in Sources */,
 				BFFCDAA8258A763100D17F2E /* AddWandelingViewController.swift in Sources */,
 				BF12B062258614AF0026A786 /* NetworkController.swift in Sources */,

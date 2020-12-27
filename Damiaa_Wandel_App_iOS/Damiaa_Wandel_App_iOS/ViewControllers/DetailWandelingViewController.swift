@@ -9,23 +9,18 @@ import UIKit
 
 class DetailWandelingViewController: UIViewController {
     
-    @IBOutlet var _titel : UILabel!
-    @IBOutlet var _afstand : UILabel!
-    @IBOutlet var _omschrijving : UILabel!
+    @IBOutlet var _titel : UILabel! = UILabel()
+    @IBOutlet var _afstand : UILabel! = UILabel()
+    @IBOutlet var _omschrijving : UILabel! = UILabel()
     
-    var wandelingDetails : Wandeling!
+    var wDetails : Wandeling?
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    override func viewDidLoad(){
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
         
-    }
-    
-    func setUpDetails(wandelingDetails : Wandeling){
-        _titel.text = wandelingDetails.title
-        _afstand.text = wandelingDetails.afstand
-        _omschrijving.text = wandelingDetails.omschrijving
+        _titel.text = wDetails!.title
+        _afstand.text = wDetails!.afstand! + " km"
+        _omschrijving.text = wDetails!.omschrijving
+        print("viewWillAppear")
     }
     
 }

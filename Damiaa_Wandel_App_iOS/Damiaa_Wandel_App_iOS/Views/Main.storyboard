@@ -200,7 +200,7 @@
         <!--Overzicht-->
         <scene sceneID="Cg2-4Z-L4h">
             <objects>
-                <tableViewController id="61J-AE-QTv" userLabel="Overzicht" customClass="HomeScreenViewController" customModule="Damiaa_Wandel_App_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="HomeScreen" id="61J-AE-QTv" userLabel="Overzicht" customClass="HomeScreenViewController" customModule="Damiaa_Wandel_App_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="107" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wm8-0N-pUR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -240,7 +240,6 @@
                                     <outlet property="afstand" destination="nwW-MG-kEZ" id="d2F-dY-AdV"/>
                                     <outlet property="omschrijving" destination="VK9-QA-CMP" id="EhY-Ku-qJs"/>
                                     <outlet property="title" destination="u0f-EO-HA8" id="7zC-sB-ghR"/>
-                                    <segue destination="uaW-md-vmA" kind="push" id="M7k-GQ-2W7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -250,16 +249,17 @@
                     <navigationItem key="navigationItem" id="T8W-5g-5dv"/>
                     <connections>
                         <outlet property="tableView" destination="wm8-0N-pUR" id="6Gi-i0-eq6"/>
+                        <segue destination="uaW-md-vmA" kind="show" identifier="ToDetails" id="uMX-ES-Gmh"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rsE-zE-Clt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2789.8550724637685" y="-139.28571428571428"/>
+            <point key="canvasLocation" x="2790" y="-159"/>
         </scene>
         <!--DetailWandeling Controller-->
         <scene sceneID="m5N-5c-uDJ">
             <objects>
-                <viewController storyboardIdentifier="DetailWandeling" id="uaW-md-vmA" userLabel="DetailWandeling Controller" customClass="DetailWandelingViewController" customModule="Damiaa_Wandel_App_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uaW-md-vmA" userLabel="DetailWandeling Controller" customClass="DetailWandelingViewController" customModule="Damiaa_Wandel_App_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dux-vd-J5e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -283,15 +283,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Omschrijving" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POQ-2O-dPo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Omschrijving" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POQ-2O-dPo">
                                 <rect key="frame" x="20" y="192" width="241" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="satellite" showsUserLocation="YES" showsBuildings="NO" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGT-Ey-GlE">
-                                <rect key="frame" x="20" y="301" width="374" height="512"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uGT-Ey-GlE">
+                                <rect key="frame" x="20" y="301" width="374" height="494"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>

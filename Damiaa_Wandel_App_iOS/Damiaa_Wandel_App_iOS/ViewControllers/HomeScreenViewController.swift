@@ -51,11 +51,16 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         print("you tapped me!" + self.items![indexPath.row].title!)
         
-        let selectedWandeling = self.items![indexPath.row]
+        performSegue(withIdentifier: "ToDetails", sender: self)
         
-        if let viewController = storyboard?.instantiateViewController(withIdentifier: "DetailWandeling") as? DetailWandelingViewController {
-            viewController.setUpDetails(wandelingDetails: selectedWandeling)
-        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let details = segue.destination as! DetailWandelingViewController
+        
+        if let indexPath = tableView.indexPathForSelectedRow{
+            details.wDetails = items![indexPath.row]
         }
     }
     
