@@ -22,6 +22,7 @@
 		BF734286257D0C950066E7C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734285257D0C950066E7C2 /* ViewController.swift */; };
 		BF9F83132534C5CC00EDFF2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F83122534C5CC00EDFF2B /* AppDelegate.swift */; };
 		BF9F83172534C5CF00EDFF2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF9F83162534C5CF00EDFF2B /* Assets.xcassets */; };
+		BFC04534259A48BE001470D6 /* Locatie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC04533259A48BE001470D6 /* Locatie.swift */; };
 		BFD6FFDD258BCE4200152F5E /* WandelingModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFD6FFDB258BCE4200152F5E /* WandelingModel.xcdatamodeld */; };
 		BFFCDAA8258A763100D17F2E /* AddWandelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCDAA7258A763100D17F2E /* AddWandelingViewController.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		BF9F83122534C5CC00EDFF2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF9F83162534C5CF00EDFF2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF9F831B2534C5CF00EDFF2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFC04533259A48BE001470D6 /* Locatie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locatie.swift; sourceTree = "<group>"; };
 		BFD6FFDC258BCE4200152F5E /* WandelingModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WandelingModel.xcdatamodel; sourceTree = "<group>"; };
 		BFFCDAA7258A763100D17F2E /* AddWandelingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWandelingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				BF12B0642586152E0026A786 /* MockWandeling.swift */,
+				BFC04533259A48BE001470D6 /* Locatie.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				BF5086752597CD850030BCB2 /* DetailWandelingViewController.swift in Sources */,
 				BF0E13DA2587DC14005B5813 /* WandelingCell.swift in Sources */,
 				BF734282257CEF920066E7C2 /* SceneDelegate.swift in Sources */,
+				BFC04534259A48BE001470D6 /* Locatie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

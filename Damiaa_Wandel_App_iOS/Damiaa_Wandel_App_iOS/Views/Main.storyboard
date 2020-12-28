@@ -290,10 +290,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uGT-Ey-GlE">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="hybrid" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGT-Ey-GlE">
                                 <rect key="frame" x="20" y="301" width="374" height="494"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GzK-Me-I4I">
+                                <rect key="frame" x="192" y="751" width="191" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <segments>
+                                    <segment title="Satelliet"/>
+                                    <segment title="Kaart"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemYellowColor"/>
+                                <connections>
+                                    <action selector="changeMapType:" destination="uaW-md-vmA" eventType="valueChanged" id="ZGA-hR-oSt"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zH0-M7-xwe">
+                                <rect key="frame" x="29" y="751" width="96" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="mijn locatie">
+                                    <color key="titleColor" systemColor="systemYellowColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="findMyLocation:" destination="uaW-md-vmA" eventType="touchUpInside" id="CaZ-NX-SkN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cYo-CY-H7R"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
@@ -303,6 +327,7 @@
                         <outlet property="_afstand" destination="78p-JF-wwE" id="D7p-jf-neG"/>
                         <outlet property="_omschrijving" destination="POQ-2O-dPo" id="cAZ-I5-vTq"/>
                         <outlet property="_titel" destination="r73-1G-ild" id="mc4-nD-d2i"/>
+                        <outlet property="mapView" destination="uGT-Ey-GlE" id="zp8-7S-mEq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWz-ox-lib" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
