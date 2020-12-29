@@ -17,6 +17,7 @@ class DetailWandelingViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     var bestemming: Locatie?
+    var userLoc : CLLocation?
     var wDetails : Wandeling?
     let manager = CLLocationManager()
     
@@ -63,7 +64,7 @@ class DetailWandelingViewController: UIViewController {
         _afstand.text = wDetails!.afstand! + " km"
         _omschrijving.text = wDetails!.omschrijving
         prepBestemming(coordinates: wDetails!.bestemming!)
-        
+        getDirections()
         print("viewWillAppear")
     }
     
@@ -79,6 +80,48 @@ class DetailWandelingViewController: UIViewController {
         
             mapView.setRegion(region, animated: true)
             print(coordinates)
+    }
+    
+    func getDirections(){
+        guard let location = manager.location?.coordinate else {
+            
+            return
+        }
+        
+        let request = createDirectionRequest(from: location)
+        let directions = MKDirections(request: request)
+        
+        directions.calculate{ [unowned self] (response, error) in
+            //TODO: Error handling
+            guard let response = response else { return } //TODO: show response is not available in an alert
+            
+            for route in response.routes {
+                self.mapView.addOverlay(route.polyline)
+                self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true) //toont de volledige route op de map
+            }
+        }
+    }
+    
+    func createDirectionRequest(from coordinate: CLLocationCoordinate2D) -> MKDirections.Request{
+        
+        let destinationCoordinate = CLLocationCoordinate2DMake(wDetails!.bestemming![0], wDetails!.bestemming![1])
+        let startingLocation      = MKPlacemark(coordinate: coordinate)
+        let destination           = MKPlacemark(coordinate: destinationCoordinate)
+        
+        let request = MKDirections.Request()
+        request.source = MKMapItem(placemark: startingLocation)
+        request.destination = MKMapItem(placemark: destination)
+        request.transportType = .walking
+        //request.requestsAlternateRoutes = true
+        
+        return request
+    }
+    
+    func getCenterLocation(for mapView: MKMapView) -> CLLocation{
+        let latitude = mapView.centerCoordinate.latitude
+        let longitude = mapView.centerCoordinate.longitude
+        
+        return CLLocation(latitude: latitude, longitude: longitude)
     }
     
 }
@@ -110,5 +153,12 @@ extension DetailWandelingViewController: MKMapViewDelegate, CLLocationManagerDel
 //        let pin = MKPointAnnotation()
 //        pin.coordinate = coordinate
 //        mapView.addAnnotation(pin)
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay as! MKPolyline)
+        renderer.strokeColor = .red
+        
+        return renderer
     }
 }
