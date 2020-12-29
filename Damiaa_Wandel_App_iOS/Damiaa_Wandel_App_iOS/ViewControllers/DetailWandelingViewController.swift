@@ -14,8 +14,8 @@ class DetailWandelingViewController: UIViewController {
     @IBOutlet var _titel : UILabel! = UILabel()
     @IBOutlet var _afstand : UILabel! = UILabel()
     @IBOutlet var _omschrijving : UILabel! = UILabel()
-    
     @IBOutlet weak var mapView: MKMapView!
+    
     var bestemming: Locatie?
     var wDetails : Wandeling?
     let manager = CLLocationManager()
@@ -38,13 +38,13 @@ class DetailWandelingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let bestemming = bestemming {
-            let regionRadius: CLLocationDistance = 1000.0
-            let region = MKCoordinateRegion(center: bestemming.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-            
-            mapView.setRegion(region, animated: true)
-        }
-        
+//        if let bestemming = bestemming {
+//            let regionRadius: CLLocationDistance = 1000.0
+//            let region = MKCoordinateRegion(center: bestemming.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+//
+//            mapView.setRegion(region, animated: true)
+//        }
+        prepBestemming(coordinates: wDetails!.bestemming!)
         mapView.delegate = self
     }
     
@@ -54,7 +54,7 @@ class DetailWandelingViewController: UIViewController {
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest // Best consumes a lot of Battery
         manager.requestWhenInUseAuthorization()
-        manager.startUpdatingLocation()
+//        manager.startUpdatingLocation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,7 +62,23 @@ class DetailWandelingViewController: UIViewController {
         _titel.text = wDetails!.title
         _afstand.text = wDetails!.afstand! + " km"
         _omschrijving.text = wDetails!.omschrijving
+        prepBestemming(coordinates: wDetails!.bestemming!)
+        
         print("viewWillAppear")
+    }
+    
+    func prepBestemming(coordinates: [Double]){
+        
+            let regionRadius: CLLocationDistance = 1000.0
+            let co = CLLocationCoordinate2D(latitude: coordinates[0], longitude: coordinates[1])
+            let region = MKCoordinateRegion(center: co, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+            
+            let pin = MKPointAnnotation()
+            pin.coordinate = co
+            mapView.addAnnotation(pin)
+        
+            mapView.setRegion(region, animated: true)
+            print(coordinates)
     }
     
 }

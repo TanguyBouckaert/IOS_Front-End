@@ -33,30 +33,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="ePk-0X-JXP" userLabel="WandelingForm">
-                                <rect key="frame" x="30" y="118" width="354" height="157"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ePk-0X-JXP" userLabel="WandelingForm">
+                                <rect key="frame" x="30" y="118" width="354" height="196"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ETy-k6-dsF" userLabel="title">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="H7X-rN-USy" userLabel="title">
                                         <rect key="frame" x="8" y="8" width="338" height="34"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Naam Wandeling   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ElF-az-VRq" userLabel="naam">
-                                                <rect key="frame" x="0.0" y="0.0" width="142" height="34"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Naam Wandeling" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAN-mV-Nx3" userLabel="naam">
+                                                <rect key="frame" x="0.0" y="0.0" width="129" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ochtend Wandeling" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ByN-Ey-bns" userLabel="input title">
-                                                <rect key="frame" x="142" y="0.0" width="196" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ochtend Wandeling" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uHu-I1-9fn" userLabel="input title">
+                                                <rect key="frame" x="139" y="0.0" width="199" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
-                                                    <action selector="input_title:" destination="Bo8-cF-jsg" eventType="editingDidEnd" id="oCc-rX-URT"/>
+                                                    <action selector="input_title:" destination="Bo8-cF-jsg" eventType="editingDidEnd" id="hkv-Ia-v1h"/>
                                                 </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VaR-r1-yGG" userLabel="afstand">
-                                        <rect key="frame" x="8" y="45" width="338" height="34"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="VaR-r1-yGG" userLabel="afstand">
+                                        <rect key="frame" x="8" y="57" width="338" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Afstand     " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBb-1P-ROS" userLabel="afstand">
                                                 <rect key="frame" x="0.0" y="0.0" width="80.5" height="34"/>
@@ -65,14 +65,14 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9da-dB-OZ0" userLabel="input afstand">
-                                                <rect key="frame" x="80.5" y="0.0" width="257.5" height="34"/>
+                                                <rect key="frame" x="135.5" y="0.0" width="202.5" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZqU-MQ-3aN" userLabel="omschrijving">
-                                        <rect key="frame" x="8" y="82" width="338" height="34"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="ZqU-MQ-3aN" userLabel="omschrijving">
+                                        <rect key="frame" x="8" y="106" width="338" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Omschrijving   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBS-ta-8qN" userLabel="omschrijving">
                                                 <rect key="frame" x="0.0" y="0.0" width="113" height="34"/>
@@ -81,27 +81,69 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s5M-py-r4l" userLabel="input omschrijving">
-                                                <rect key="frame" x="113" y="0.0" width="225" height="34"/>
+                                                <rect key="frame" x="136" y="0.0" width="202" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yG5-bi-Dmf">
-                                        <rect key="frame" x="8" y="119" width="338" height="30"/>
-                                        <state key="normal" title="Add Wandeling"/>
+                                        <rect key="frame" x="8" y="155" width="338" height="33"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="Add Wandeling">
+                                            <color key="titleColor" systemColor="systemYellowColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="addWandeling:" destination="f5u-nP-vR2" eventType="touchUpInside" id="ygw-WR-5ow"/>
                                             <action selector="maakWandeling:" destination="Bo8-cF-jsg" eventType="touchDown" id="cia-gy-kYL"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                             </stackView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="hybrid" rotateEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t6i-7H-Drf">
+                                <rect key="frame" x="30" y="368" width="354" height="381"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="oDB-AR-u6j">
+                                <rect key="frame" x="38" y="708" width="96" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="mijn locatie">
+                                    <color key="titleColor" systemColor="systemYellowColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="findMyLocation:" destination="uaW-md-vmA" eventType="touchUpInside" id="Tq3-In-IHe"/>
+                                    <action selector="findMyLocation:" destination="f5u-nP-vR2" eventType="touchUpInside" id="X1O-4V-NbY"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ex6-ky-awp">
+                                <rect key="frame" x="183" y="708" width="191" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <segments>
+                                    <segment title="Satelliet"/>
+                                    <segment title="Kaart"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemYellowColor"/>
+                                <connections>
+                                    <action selector="changeMapType:" destination="uaW-md-vmA" eventType="valueChanged" id="0Cy-UQ-9fk"/>
+                                    <action selector="changeMapType:" destination="f5u-nP-vR2" eventType="valueChanged" id="lQx-h6-aKs"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kies uw bestemming" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qth-ay-HUC">
+                                <rect key="frame" x="74" y="319" width="266" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VIU-BS-3Hd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
                         <constraints>
                             <constraint firstItem="VIU-BS-3Hd" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ePk-0X-JXP" secondAttribute="bottom" constant="30" id="6SO-8h-y6Z"/>
                             <constraint firstItem="ePk-0X-JXP" firstAttribute="top" secondItem="VIU-BS-3Hd" secondAttribute="top" constant="30" id="OuH-ET-at0"/>
@@ -110,12 +152,14 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="qbC-bH-DRd"/>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="qGt-rq-75y"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="input_afstand" destination="9da-dB-OZ0" id="kOs-LI-NeX"/>
                         <outlet property="input_omschrijving" destination="s5M-py-r4l" id="8Vu-6c-1fb"/>
-                        <outlet property="input_title" destination="ByN-Ey-bns" id="UaH-hQ-sJ5"/>
+                        <outlet property="input_title" destination="uHu-I1-9fn" id="ilV-cD-Xfs"/>
+                        <outlet property="mapView" destination="t6i-7H-Drf" id="J8y-Uv-8MG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OtV-DU-bBw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -307,10 +351,11 @@
                                     <action selector="changeMapType:" destination="uaW-md-vmA" eventType="valueChanged" id="ZGA-hR-oSt"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zH0-M7-xwe">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="zH0-M7-xwe">
                                 <rect key="frame" x="29" y="751" width="96" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="mijn locatie">
                                     <color key="titleColor" systemColor="systemYellowColor"/>
                                 </state>
@@ -349,9 +394,6 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

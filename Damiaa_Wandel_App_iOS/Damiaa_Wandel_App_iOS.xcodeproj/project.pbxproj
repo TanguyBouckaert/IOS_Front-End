@@ -12,9 +12,8 @@
 		BF0E13DA2587DC14005B5813 /* WandelingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E13D92587DC14005B5813 /* WandelingCell.swift */; };
 		BF12B05E2586149B0026A786 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B05D2586149B0026A786 /* DatabaseController.swift */; };
 		BF12B062258614AF0026A786 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B061258614AF0026A786 /* NetworkController.swift */; };
-		BF12B0652586152E0026A786 /* MockWandeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B0642586152E0026A786 /* MockWandeling.swift */; };
-		BF26A7CC2590B0CF00CB4FE2 /* Wandeling+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A7CA2590B0CF00CB4FE2 /* Wandeling+CoreDataClass.swift */; };
-		BF26A7CD2590B0CF00CB4FE2 /* Wandeling+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A7CB2590B0CF00CB4FE2 /* Wandeling+CoreDataProperties.swift */; };
+		BF3940DB259B9D79007C976C /* Wandeling+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3940D9259B9D79007C976C /* Wandeling+CoreDataClass.swift */; };
+		BF3940DC259B9D79007C976C /* Wandeling+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3940DA259B9D79007C976C /* Wandeling+CoreDataProperties.swift */; };
 		BF5086752597CD850030BCB2 /* DetailWandelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5086742597CD850030BCB2 /* DetailWandelingViewController.swift */; };
 		BF734275257CD9620066E7C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF734274257CD9620066E7C2 /* LaunchScreen.storyboard */; };
 		BF734279257CDED20066E7C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF734278257CDED20066E7C2 /* Main.storyboard */; };
@@ -33,9 +32,8 @@
 		BF0E13D92587DC14005B5813 /* WandelingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WandelingCell.swift; sourceTree = "<group>"; };
 		BF12B05D2586149B0026A786 /* DatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
 		BF12B061258614AF0026A786 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
-		BF12B0642586152E0026A786 /* MockWandeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWandeling.swift; sourceTree = "<group>"; };
-		BF26A7CA2590B0CF00CB4FE2 /* Wandeling+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wandeling+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BF26A7CB2590B0CF00CB4FE2 /* Wandeling+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wandeling+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BF3940D9259B9D79007C976C /* Wandeling+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wandeling+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BF3940DA259B9D79007C976C /* Wandeling+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wandeling+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BF5086742597CD850030BCB2 /* DetailWandelingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWandelingViewController.swift; sourceTree = "<group>"; };
 		BF734274257CD9620066E7C2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF734278257CDED20066E7C2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -92,7 +90,8 @@
 		BF12B05B2586143A0026A786 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BF12B0642586152E0026A786 /* MockWandeling.swift */,
+				BF3940D9259B9D79007C976C /* Wandeling+CoreDataClass.swift */,
+				BF3940DA259B9D79007C976C /* Wandeling+CoreDataProperties.swift */,
 				BFC04533259A48BE001470D6 /* Locatie.swift */,
 			);
 			name = Models;
@@ -117,8 +116,6 @@
 		BF9F83062534C5CC00EDFF2B = {
 			isa = PBXGroup;
 			children = (
-				BF26A7CA2590B0CF00CB4FE2 /* Wandeling+CoreDataClass.swift */,
-				BF26A7CB2590B0CF00CB4FE2 /* Wandeling+CoreDataProperties.swift */,
 				BF9F83112534C5CC00EDFF2B /* Damiaa_Wandel_App_iOS */,
 				BF9F83102534C5CC00EDFF2B /* Products */,
 			);
@@ -221,15 +218,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF26A7CD2590B0CF00CB4FE2 /* Wandeling+CoreDataProperties.swift in Sources */,
-				BF26A7CC2590B0CF00CB4FE2 /* Wandeling+CoreDataClass.swift in Sources */,
+				BF3940DC259B9D79007C976C /* Wandeling+CoreDataProperties.swift in Sources */,
 				BFFCDAA8258A763100D17F2E /* AddWandelingViewController.swift in Sources */,
+				BF3940DB259B9D79007C976C /* Wandeling+CoreDataClass.swift in Sources */,
 				BF12B062258614AF0026A786 /* NetworkController.swift in Sources */,
 				BF0E13D32587C8F7005B5813 /* HomeScreenViewController.swift in Sources */,
 				BF0E13D62587D59A005B5813 /* LoginScreenViewController.swift in Sources */,
 				BF12B05E2586149B0026A786 /* DatabaseController.swift in Sources */,
 				BF734286257D0C950066E7C2 /* ViewController.swift in Sources */,
-				BF12B0652586152E0026A786 /* MockWandeling.swift in Sources */,
 				BF9F83132534C5CC00EDFF2B /* AppDelegate.swift in Sources */,
 				BFD6FFDD258BCE4200152F5E /* WandelingModel.xcdatamodeld in Sources */,
 				BF5086752597CD850030BCB2 /* DetailWandelingViewController.swift in Sources */,
