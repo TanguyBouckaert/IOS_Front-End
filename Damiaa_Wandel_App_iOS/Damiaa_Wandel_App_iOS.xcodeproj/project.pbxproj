@@ -3,17 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		BF0E13D32587C8F7005B5813 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E13D22587C8F7005B5813 /* HomeScreenViewController.swift */; };
 		BF0E13D62587D59A005B5813 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E13D52587D59A005B5813 /* LoginScreenViewController.swift */; };
 		BF0E13DA2587DC14005B5813 /* WandelingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E13D92587DC14005B5813 /* WandelingCell.swift */; };
-		BF12B05E2586149B0026A786 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B05D2586149B0026A786 /* DatabaseController.swift */; };
-		BF12B062258614AF0026A786 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B061258614AF0026A786 /* NetworkController.swift */; };
 		BF3940DB259B9D79007C976C /* Wandeling+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3940D9259B9D79007C976C /* Wandeling+CoreDataClass.swift */; };
 		BF3940DC259B9D79007C976C /* Wandeling+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3940DA259B9D79007C976C /* Wandeling+CoreDataProperties.swift */; };
+		BF4D8A1825A61FDE003D4641 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF4D8A1725A61FDE003D4641 /* GoogleService-Info.plist */; };
 		BF5086752597CD850030BCB2 /* DetailWandelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5086742597CD850030BCB2 /* DetailWandelingViewController.swift */; };
 		BF734275257CD9620066E7C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF734274257CD9620066E7C2 /* LaunchScreen.storyboard */; };
 		BF734279257CDED20066E7C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF734278257CDED20066E7C2 /* Main.storyboard */; };
@@ -24,16 +23,19 @@
 		BFC04534259A48BE001470D6 /* Locatie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC04533259A48BE001470D6 /* Locatie.swift */; };
 		BFD6FFDD258BCE4200152F5E /* WandelingModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFD6FFDB258BCE4200152F5E /* WandelingModel.xcdatamodeld */; };
 		BFFCDAA8258A763100D17F2E /* AddWandelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCDAA7258A763100D17F2E /* AddWandelingViewController.swift */; };
+		CFD1940C2A50D210B83242B2 /* Pods_Damiaa_Wandel_App_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3365C0C496B139AFEDFDB101 /* Pods_Damiaa_Wandel_App_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3365C0C496B139AFEDFDB101 /* Pods_Damiaa_Wandel_App_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Damiaa_Wandel_App_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45A86A698601FBEA2207464D /* Pods-Damiaa_Wandel_App_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Damiaa_Wandel_App_iOS.release.xcconfig"; path = "Target Support Files/Pods-Damiaa_Wandel_App_iOS/Pods-Damiaa_Wandel_App_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		6E1396297BC1955CEA876699 /* Pods-Damiaa_Wandel_App_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Damiaa_Wandel_App_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Damiaa_Wandel_App_iOS/Pods-Damiaa_Wandel_App_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		BF0E13D22587C8F7005B5813 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		BF0E13D52587D59A005B5813 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		BF0E13D92587DC14005B5813 /* WandelingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WandelingCell.swift; sourceTree = "<group>"; };
-		BF12B05D2586149B0026A786 /* DatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
-		BF12B061258614AF0026A786 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		BF3940D9259B9D79007C976C /* Wandeling+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wandeling+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BF3940DA259B9D79007C976C /* Wandeling+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wandeling+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BF4D8A1725A61FDE003D4641 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF5086742597CD850030BCB2 /* DetailWandelingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWandelingViewController.swift; sourceTree = "<group>"; };
 		BF734274257CD9620066E7C2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF734278257CDED20066E7C2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -53,12 +55,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFD1940C2A50D210B83242B2 /* Pods_Damiaa_Wandel_App_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52EFB1D8947BEB25C91E6FF4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E1396297BC1955CEA876699 /* Pods-Damiaa_Wandel_App_iOS.debug.xcconfig */,
+				45A86A698601FBEA2207464D /* Pods-Damiaa_Wandel_App_iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BF0E13D12587C8B9005B5813 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,15 +88,6 @@
 				BF0E13D92587DC14005B5813 /* WandelingCell.swift */,
 			);
 			path = "Special views";
-			sourceTree = "<group>";
-		};
-		BF12B059258614170026A786 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				BF12B05D2586149B0026A786 /* DatabaseController.swift */,
-				BF12B061258614AF0026A786 /* NetworkController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		BF12B05B2586143A0026A786 /* Models */ = {
@@ -118,6 +121,8 @@
 			children = (
 				BF9F83112534C5CC00EDFF2B /* Damiaa_Wandel_App_iOS */,
 				BF9F83102534C5CC00EDFF2B /* Products */,
+				52EFB1D8947BEB25C91E6FF4 /* Pods */,
+				F26809CDAA4FC87FFA8DA33A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,15 +142,23 @@
 				BF12B095258627240026A786 /* DataModel */,
 				BF12B05C258614600026A786 /* Views */,
 				BF12B05B2586143A0026A786 /* Models */,
-				BF12B059258614170026A786 /* Controllers */,
 				BF9F83122534C5CC00EDFF2B /* AppDelegate.swift */,
 				BF734281257CEF920066E7C2 /* SceneDelegate.swift */,
 				BF734285257D0C950066E7C2 /* ViewController.swift */,
 				BF9F83162534C5CF00EDFF2B /* Assets.xcassets */,
 				BF9F831B2534C5CF00EDFF2B /* Info.plist */,
+				BF4D8A1725A61FDE003D4641 /* GoogleService-Info.plist */,
 				BF734274257CD9620066E7C2 /* LaunchScreen.storyboard */,
 			);
 			path = Damiaa_Wandel_App_iOS;
+			sourceTree = "<group>";
+		};
+		F26809CDAA4FC87FFA8DA33A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3365C0C496B139AFEDFDB101 /* Pods_Damiaa_Wandel_App_iOS.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,9 +168,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF9F831E2534C5CF00EDFF2B /* Build configuration list for PBXNativeTarget "Damiaa_Wandel_App_iOS" */;
 			buildPhases = (
+				95E1770233DCCB2FA4799B47 /* [CP] Check Pods Manifest.lock */,
 				BF9F830B2534C5CC00EDFF2B /* Sources */,
 				BF9F830C2534C5CC00EDFF2B /* Frameworks */,
 				BF9F830D2534C5CC00EDFF2B /* Resources */,
+				FEC068731DAD97807DAF4FCF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -206,12 +221,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF9F83172534C5CF00EDFF2B /* Assets.xcassets in Resources */,
+				BF4D8A1825A61FDE003D4641 /* GoogleService-Info.plist in Resources */,
 				BF734275257CD9620066E7C2 /* LaunchScreen.storyboard in Resources */,
 				BF734279257CDED20066E7C2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		95E1770233DCCB2FA4799B47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Damiaa_Wandel_App_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEC068731DAD97807DAF4FCF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Damiaa_Wandel_App_iOS/Pods-Damiaa_Wandel_App_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Damiaa_Wandel_App_iOS/Pods-Damiaa_Wandel_App_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Damiaa_Wandel_App_iOS/Pods-Damiaa_Wandel_App_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BF9F830B2534C5CC00EDFF2B /* Sources */ = {
@@ -221,10 +279,8 @@
 				BF3940DC259B9D79007C976C /* Wandeling+CoreDataProperties.swift in Sources */,
 				BFFCDAA8258A763100D17F2E /* AddWandelingViewController.swift in Sources */,
 				BF3940DB259B9D79007C976C /* Wandeling+CoreDataClass.swift in Sources */,
-				BF12B062258614AF0026A786 /* NetworkController.swift in Sources */,
 				BF0E13D32587C8F7005B5813 /* HomeScreenViewController.swift in Sources */,
 				BF0E13D62587D59A005B5813 /* LoginScreenViewController.swift in Sources */,
-				BF12B05E2586149B0026A786 /* DatabaseController.swift in Sources */,
 				BF734286257D0C950066E7C2 /* ViewController.swift in Sources */,
 				BF9F83132534C5CC00EDFF2B /* AppDelegate.swift in Sources */,
 				BFD6FFDD258BCE4200152F5E /* WandelingModel.xcdatamodeld in Sources */,
@@ -358,6 +414,7 @@
 		};
 		BF9F831F2534C5CF00EDFF2B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E1396297BC1955CEA876699 /* Pods-Damiaa_Wandel_App_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -379,6 +436,7 @@
 		};
 		BF9F83202534C5CF00EDFF2B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45A86A698601FBEA2207464D /* Pods-Damiaa_Wandel_App_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
