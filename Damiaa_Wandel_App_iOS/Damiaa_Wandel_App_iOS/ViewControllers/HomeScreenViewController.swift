@@ -22,6 +22,9 @@ class HomeScreenViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
 
+        tableView.separatorStyle = .none
+        
+        
         fetchWandelingen()
     }
     

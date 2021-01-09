@@ -18,10 +18,17 @@ class WandelingCell: UITableViewCell {
         
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        contentView.layer.cornerRadius = 5
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
+    }
+    
     func update(wandeling : Wandeling){
         title.numberOfLines = 3
         title.text = wandeling.title
-        afstand.text = wandeling.afstand! + " km"
+        afstand.text = wandeling.afstand!
         omschrijving.text = wandeling.omschrijving
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginScreenViewController: UIViewController {
             
@@ -14,21 +15,48 @@ class LoginScreenViewController: UIViewController {
     
     @IBAction func login(_ sender: Any) {
         
-        if(username_input.text == "Tony" && password_input.text == "Tony"){
-            performSegue(withIdentifier: "LoggedIn", sender: self)
-        }else{
+        // Validate Text Fields
+        
+        //Create a cleaned version of the text field
+        let username = username_input.text!
+        let password = password_input.text!
+        
+        Auth.auth().signIn(withEmail: username, password: password){
+            (result, error) in
             
-            self.perform(#selector(displayAlert), with: nil, afterDelay: 300)
+            if error != nil{
+                
+                let loginAlert = UIAlertController(title: "Login Mislukt", message: "Uw gebruikersnaam en wachtwoord komen niet overeen.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default){
+                    UIAlertAction in
+                    print("Failed Login")
+                }
+                loginAlert.addAction(okAction)
+                self.present(loginAlert, animated: true, completion: nil)
+                
+            }else{
+                
+                let homeViewController = self.storyboard?.instantiateViewController(identifier: "BeginNav") as? TabBarController
+                
+                self.view.window?.rootViewController = homeViewController
+                self.view.window?.makeKeyAndVisible()
+            }
         }
     }
     
-    @objc func displayAlert(){
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        let loginAlert = UIAlertController()
-        loginAlert.title = "Login Mislukt"
-        loginAlert.message = "Uw gebruikersnaam en wachtwoord komen niet overeen."
-        self.present(loginAlert, animated: true, completion: nil)
-        
+        self.tabBarController?.tabBar.isHidden = true
     }
+    
+//    @objc func displayAlert(){
+//
+//        let loginAlert = UIAlertController()
+//        loginAlert.title = "Login Mislukt"
+//        loginAlert.message = "Uw gebruikersnaam en wachtwoord komen niet overeen."
+//        self.present(loginAlert, animated: true, completion: nil)
+//
+//    }
     
 }
