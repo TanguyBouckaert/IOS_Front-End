@@ -28,7 +28,7 @@ class WandelingCell: UITableViewCell {
     func update(wandeling : Wandeling){
         title.numberOfLines = 3
         title.text = wandeling.title
-        afstand.text = wandeling.afstand!
+        afstand.text = wandeling.afstand
         omschrijving.text = wandeling.omschrijving
     }
 }

@@ -16,7 +16,7 @@ class DetailWandelingViewController: UIViewController {
     @IBOutlet var _omschrijving : UILabel! = UILabel()
     @IBOutlet weak var mapView: MKMapView!
     
-    var bestemming: Locatie?
+    var bestemming: CLLocation?
     var userLoc : CLLocation?
     var wDetails : Wandeling?
     let manager = CLLocationManager()
@@ -35,16 +35,9 @@ class DetailWandelingViewController: UIViewController {
         manager.startUpdatingLocation()
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if let bestemming = bestemming {
-//            let regionRadius: CLLocationDistance = 1000.0
-//            let region = MKCoordinateRegion(center: bestemming.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-//
-//            mapView.setRegion(region, animated: true)
-//        }
         prepBestemming(coordinates: wDetails!.bestemming!)
         mapView.delegate = self
     }
@@ -55,7 +48,6 @@ class DetailWandelingViewController: UIViewController {
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest // Best consumes a lot of Battery
         manager.requestWhenInUseAuthorization()
-//        manager.startUpdatingLocation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -149,7 +141,7 @@ extension DetailWandelingViewController: MKMapViewDelegate, CLLocationManagerDel
         
         mapView.setRegion(region , animated: true)
         
-        //How to put a pin on the map
+//        How to put a pin on the map
 //        let pin = MKPointAnnotation()
 //        pin.coordinate = coordinate
 //        mapView.addAnnotation(pin)

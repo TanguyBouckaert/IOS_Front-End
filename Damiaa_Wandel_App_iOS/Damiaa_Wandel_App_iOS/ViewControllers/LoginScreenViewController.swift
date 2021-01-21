@@ -15,8 +15,6 @@ class LoginScreenViewController: UIViewController {
     
     @IBAction func login(_ sender: Any) {
         
-        // Validate Text Fields
-        
         //Create a cleaned version of the text field
         let username = username_input.text!
         let password = password_input.text!
@@ -49,14 +47,4 @@ class LoginScreenViewController: UIViewController {
         
         self.tabBarController?.tabBar.isHidden = true
     }
-    
-//    @objc func displayAlert(){
-//
-//        let loginAlert = UIAlertController()
-//        loginAlert.title = "Login Mislukt"
-//        loginAlert.message = "Uw gebruikersnaam en wachtwoord komen niet overeen."
-//        self.present(loginAlert, animated: true, completion: nil)
-//
-//    }
-    
 }

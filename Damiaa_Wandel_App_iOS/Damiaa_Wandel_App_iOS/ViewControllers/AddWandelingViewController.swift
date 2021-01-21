@@ -63,6 +63,7 @@ class AddWandelingViewController: UIViewController {
         
         //Toont eerst een alert voor een wandeling wordt toegevoegd
         self.alert = UIAlertController(title: self.input_title.text, message: self.input_omschrijving.text, preferredStyle: .alert)
+        
         let okeAction = UIAlertAction(title: "OK", style: .default){
             UIAlertAction in
             
@@ -82,16 +83,24 @@ class AddWandelingViewController: UIViewController {
             //Save the data
             do {
                 try self.context.save()
+                
+                self.input_title.text = ""
+                self.input_afstand.text = ""
+                self.input_omschrijving.text = ""
+                self.mapView.removeAnnotation(self.input_bestemming)
+                
             } catch {
                 print("An error occurred while saving the newWandeling!!!")
             }
             
         }
-        self.alert.addAction(okeAction)// Moet naar een detail pagina gaan!!
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel){
             UIAlertAction in
             print("doe niets")
         }
+        
+        self.alert.addAction(okeAction)
         self.alert.addAction(cancelAction)
         self.present(alert, animated: true, completion: nil)
     }
@@ -129,7 +138,7 @@ extension AddWandelingViewController: MKMapViewDelegate, CLLocationManagerDelega
                 pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
                 pinView!.canShowCallout = true
                 pinView!.rightCalloutAccessoryView = UIButton(type: .infoDark)
-                pinView!.pinTintColor = UIColor.black
+                pinView!.pinTintColor = UIColor.blue
             }
             else {
                 pinView!.annotation = annotation

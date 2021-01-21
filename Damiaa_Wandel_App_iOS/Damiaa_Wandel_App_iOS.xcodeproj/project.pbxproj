@@ -12,7 +12,6 @@
 		BF0E13DA2587DC14005B5813 /* WandelingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E13D92587DC14005B5813 /* WandelingCell.swift */; };
 		BF3940DB259B9D79007C976C /* Wandeling+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3940D9259B9D79007C976C /* Wandeling+CoreDataClass.swift */; };
 		BF3940DC259B9D79007C976C /* Wandeling+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3940DA259B9D79007C976C /* Wandeling+CoreDataProperties.swift */; };
-		BF4D8A1825A61FDE003D4641 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF4D8A1725A61FDE003D4641 /* GoogleService-Info.plist */; };
 		BF5086752597CD850030BCB2 /* DetailWandelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5086742597CD850030BCB2 /* DetailWandelingViewController.swift */; };
 		BF734275257CD9620066E7C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF734274257CD9620066E7C2 /* LaunchScreen.storyboard */; };
 		BF734279257CDED20066E7C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF734278257CDED20066E7C2 /* Main.storyboard */; };
@@ -21,8 +20,8 @@
 		BF9F83132534C5CC00EDFF2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F83122534C5CC00EDFF2B /* AppDelegate.swift */; };
 		BF9F83172534C5CF00EDFF2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF9F83162534C5CF00EDFF2B /* Assets.xcassets */; };
 		BFAB717D25A9DD2000A3BFB5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB717C25A9DD2000A3BFB5 /* TabBarController.swift */; };
-		BFC04534259A48BE001470D6 /* Locatie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC04533259A48BE001470D6 /* Locatie.swift */; };
 		BFD6FFDD258BCE4200152F5E /* WandelingModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFD6FFDB258BCE4200152F5E /* WandelingModel.xcdatamodeld */; };
+		BFF103F025B88F9B00DD9580 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFF103EF25B88F9B00DD9580 /* GoogleService-Info.plist */; };
 		BFFCDAA8258A763100D17F2E /* AddWandelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCDAA7258A763100D17F2E /* AddWandelingViewController.swift */; };
 		CFD1940C2A50D210B83242B2 /* Pods_Damiaa_Wandel_App_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3365C0C496B139AFEDFDB101 /* Pods_Damiaa_Wandel_App_iOS.framework */; };
 /* End PBXBuildFile section */
@@ -36,7 +35,6 @@
 		BF0E13D92587DC14005B5813 /* WandelingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WandelingCell.swift; sourceTree = "<group>"; };
 		BF3940D9259B9D79007C976C /* Wandeling+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wandeling+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BF3940DA259B9D79007C976C /* Wandeling+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wandeling+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BF4D8A1725A61FDE003D4641 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF5086742597CD850030BCB2 /* DetailWandelingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWandelingViewController.swift; sourceTree = "<group>"; };
 		BF734274257CD9620066E7C2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF734278257CDED20066E7C2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -47,8 +45,8 @@
 		BF9F83162534C5CF00EDFF2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF9F831B2534C5CF00EDFF2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFAB717C25A9DD2000A3BFB5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		BFC04533259A48BE001470D6 /* Locatie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locatie.swift; sourceTree = "<group>"; };
 		BFD6FFDC258BCE4200152F5E /* WandelingModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WandelingModel.xcdatamodel; sourceTree = "<group>"; };
+		BFF103EF25B88F9B00DD9580 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BFFCDAA7258A763100D17F2E /* AddWandelingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWandelingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +96,6 @@
 			children = (
 				BF3940D9259B9D79007C976C /* Wandeling+CoreDataClass.swift */,
 				BF3940DA259B9D79007C976C /* Wandeling+CoreDataProperties.swift */,
-				BFC04533259A48BE001470D6 /* Locatie.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -150,7 +147,7 @@
 				BF734285257D0C950066E7C2 /* ViewController.swift */,
 				BF9F83162534C5CF00EDFF2B /* Assets.xcassets */,
 				BF9F831B2534C5CF00EDFF2B /* Info.plist */,
-				BF4D8A1725A61FDE003D4641 /* GoogleService-Info.plist */,
+				BFF103EF25B88F9B00DD9580 /* GoogleService-Info.plist */,
 				BF734274257CD9620066E7C2 /* LaunchScreen.storyboard */,
 			);
 			path = Damiaa_Wandel_App_iOS;
@@ -224,7 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF9F83172534C5CF00EDFF2B /* Assets.xcassets in Resources */,
-				BF4D8A1825A61FDE003D4641 /* GoogleService-Info.plist in Resources */,
+				BFF103F025B88F9B00DD9580 /* GoogleService-Info.plist in Resources */,
 				BF734275257CD9620066E7C2 /* LaunchScreen.storyboard in Resources */,
 				BF734279257CDED20066E7C2 /* Main.storyboard in Resources */,
 			);
@@ -291,7 +288,6 @@
 				BF5086752597CD850030BCB2 /* DetailWandelingViewController.swift in Sources */,
 				BF0E13DA2587DC14005B5813 /* WandelingCell.swift in Sources */,
 				BF734282257CEF920066E7C2 /* SceneDelegate.swift in Sources */,
-				BFC04534259A48BE001470D6 /* Locatie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

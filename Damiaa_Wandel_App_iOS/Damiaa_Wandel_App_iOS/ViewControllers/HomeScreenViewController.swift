@@ -21,15 +21,14 @@ class HomeScreenViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-
         tableView.separatorStyle = .none
-        
         
         fetchWandelingen()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
         fetchWandelingen()
     }
     
@@ -52,10 +51,9 @@ class HomeScreenViewController: UIViewController {
 extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        print("you tapped me!" + self.items![indexPath.row].title!)
+        // print("you tapped me!" + self.items![indexPath.row].title!)
         
         performSegue(withIdentifier: "ToDetails", sender: self)
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -68,7 +66,7 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(items?.count)
+        // print(items?.count)
         return self.items?.count ?? 0
     }
     
